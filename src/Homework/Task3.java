@@ -8,17 +8,21 @@ public class Task3 {
 
 
     public static void main(String[] args) {
+        System.out.println("Enter Email");
         Scanner scanner = new Scanner(System.in);
         String i = scanner.nextLine();
-        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\\\+]+(\\\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$");
+
+        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" +
+                "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
         Matcher matcher = pattern.matcher(i);
-        boolean matches = matcher.matches();
-        if (i.equals(false)) {
-            System.out.println("OK");
-        }
+
+        System.out.println("Your Email entered - " + matcher.lookingAt() + "!");
+
 
     }
+
 }
+
 
 
 
