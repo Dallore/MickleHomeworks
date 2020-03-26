@@ -6,22 +6,18 @@ import java.util.regex.Pattern;
 
 public class Task3 {
 
+        public static void main(String[] args) {
 
-    public static void main(String[] args) {
-        System.out.println("Enter Email");
-        Scanner scanner = new Scanner(System.in);
-        String i = scanner.nextLine();
-
-        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" +
-                "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-        Matcher matcher = pattern.matcher(i);
-
-        System.out.println("Your Email entered - " + matcher.lookingAt() + "!");
-
-
+            Scanner scanner = new Scanner(System.in);
+            String i = scanner.nextLine();
+            String regex = "(\\w{6,})@(\\w+\\.)([a-z]{2,4})";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(i);
+            while (matcher.find()) {
+                System.out.println("e-mail is true : " + matcher.group());
+            }
+        }
     }
-
-}
 
 
 

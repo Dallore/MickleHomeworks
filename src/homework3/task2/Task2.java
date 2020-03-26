@@ -9,25 +9,24 @@ public class Task2 {
 
     public static class ConsoleReader {
 
+        static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         public static String readString() throws IOException {
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String string = reader.readLine();
             return string;
 
         }
 
-        public static int readInt() throws IOException {
+        public int readInt() throws IOException {
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             int numbers = Integer.parseInt(reader.readLine());
             return numbers;
 
         }
 
-        public static double readDouble() throws IOException {
+        public double readDouble() throws IOException {
 
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             double fractionalNumbers = Double.parseDouble(reader.readLine());
             return fractionalNumbers;
 
