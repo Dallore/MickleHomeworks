@@ -24,7 +24,7 @@ public class Task2 {
     }
 
     public static void sort ( String[] array ) {
-        //Напишите тут ваш код
+
         int counterW = 0;
         int counterN = 0;
         for (int i = 0; i < array.length; i++) {
@@ -49,7 +49,7 @@ public class Task2 {
             }
         }
 
-        //descending bubble sort:
+
         String temp;
         for (int i = 0; i < numbers.length; i++) {
             for (int j = 1; j < numbers.length - i; j++) {
@@ -62,7 +62,7 @@ public class Task2 {
                 }
             }
         }
-        // increasing bubble sort
+
         for (int i = 0; i < words.length; i++) {
             for (int j = 0; j < words.length - 1; j++) {
                 if (isStringBetter ( words[j] , words[j + 1] )) {
@@ -85,12 +85,12 @@ public class Task2 {
         }
     }
 
-    //Метод для сравнения строк: 'а' больше чем 'b'
+
     public static boolean isStringBetter ( String a , String b ) {
         return a.compareTo ( b ) > 0;
     }
 
-    //строка - это на самом деле число?
+
     public static boolean isNumber ( String s ) {
         if (s.length () == 0) return false;
 
