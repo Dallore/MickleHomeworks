@@ -2,6 +2,8 @@ package homework4.task1;
 
 public class Plane extends Transport {
 
+    private String airplaneWings;
+
     public Plane ( String type ) {
         super ( type );
     }
